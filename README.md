@@ -23,7 +23,7 @@ Sci-fi mod for Minecraft with benefits of WarpDrive, Valkyrien Skies and SGCraft
 
 ### RFC
 
-1. Minecraft version: either 1.7.10, 1.12.2 or latest (1.18-1.19);
+1. Minecraft version: ~~either 1.7.10, 1.12.2 or latest (1.18-1.19)~~ (started at 1.18.2);
 2. Way of ship storing: 
   - in shipyard (remote chunks in same dimension where the ship was built)
     - shipyard CAN be reached by players without cheating, and that creates significant problems

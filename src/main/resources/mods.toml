@@ -1,0 +1,21 @@
+modLoader="javafml" 
+loaderVersion="[34,)"
+
+[[mods]]
+modId="valkdrive"
+version="1.18.2-1.0.0"
+displayName="Valkyrien Drive"
+
+[[dependencies.examplemod]] 
+    modId="forge" 
+    mandatory=true 
+    versionRange="[34,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2]"
+    ordering="NONE"
+    side="BOTH"
