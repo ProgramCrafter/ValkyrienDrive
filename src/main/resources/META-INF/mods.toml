@@ -1,0 +1,25 @@
+modLoader="javafml" 
+loaderVersion="[40,)"
+license="Read LICENSE*"
+
+[[mods]]
+modId="valkdrive"
+version="1.18.2-0.0.0"
+displayName="Valkyrien Drive"
+description='''
+OK, have to write description because it is required by Forge...
+'''
+
+[[dependencies.valkdrive]] 
+    modId="forge" 
+    mandatory=true 
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.valkdrive]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18,1.19)"
+    ordering="NONE"
+    side="BOTH"
