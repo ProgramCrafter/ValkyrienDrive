@@ -8,6 +8,12 @@
 
 Sci-fi mod for Minecraft with benefits of WarpDrive, Valkyrien Skies and SGCraft, controllable by OpenComputers.
 
+### Bound **~~rings~~** mods
+- [WarpDrive](https://github.com/LemADEC/WarpDrive/)
+- [Valkyrien Skies 2](https://github.com/ValkyrienSkies/Valkyrien-Skies-2/)
+- [SGCraft](https://github.com/gcewing/SGCraft/tree/mc1.7/)
+- [OpenComputers 2](https://github.com/fnuecke/oc2)
+
 ### Ideas
 
 - ships like in Valkyrien Skies
