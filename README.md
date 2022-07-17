@@ -45,7 +45,14 @@ Sci-fi mod for Minecraft with benefits of WarpDrive, Valkyrien Skies and SGCraft
 | Stage        | State       |
 | ------------ | ----------- |
 | Designing    | in progress |
-| Development  | not started |
+| Development  | in progress |
 | Testing      | not started |
 
 At the moment, this repository is RFC for collecting useful ideas.
+
+### Licensing
+
+JAR built with supllied tools can contain non-up-to-date license information. Please, be aware of this.
+
+Possibly non-exhaustive list of content borrowed from other mods:
+- Currently, all of textures were just copied from SGCraft.
