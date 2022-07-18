@@ -1,19 +1,108 @@
 {
   "lang/en_us.json":
-      {"block.valkdrive.stargate_base_block": "Stargate Base",
+      {"block.valkdrive.valkgate_controller_block": "Stargate Controller",
+       "block.valkdrive.valkgate_aligner_block": "Stargate Aligner",
+       "block.valkdrive.ship_controller_block": "Ship Controller",
+       "block.valkdrive.ship_aligner_block": "Ship Aligner",
+       "block.valkdrive.laser_medium_block": "Star Laser Medium",
+       "block.valkdrive.radar_block": "Star Radar",
+       "block.valkdrive.cloak_controller_block": "Cloak Controller",
+       "block.valkdrive.cloak_coil_block": "Cloaking Coil",
        "item.valkdrive.star_mechanism_item": "Star Mechanism"},
   "lang/ru_ru.json":
-      {"block.valkdrive.stargate_base_block": "Основа звёздных врат",
+      {"block.valkdrive.valkgate_controller_block": "Контроллер звёздных врат",
+       "block.valkdrive.valkgate_aligner_block": "Выравниватель звёздных врат",
+       "block.valkdrive.ship_controller_block": "Контроллер корабля",
+       "block.valkdrive.ship_aligner_block": "Выравниватель корабля",
+       "block.valkdrive.laser_medium_block": "Ядро звёздного лазера",
+       "block.valkdrive.radar_block": "Звёздный радар",
+       "block.valkdrive.cloak_controller_block": "Контроллер маскировки",
+       "block.valkdrive.cloak_coil_block": "Маскировочная катушка",
        "item.valkdrive.star_mechanism_item": "Звёздный корпус механизма"},
-  "blockstates/stargate_base_block.json":
+  
+  
+  
+  "blockstates/valkgate_controller_block.json":
       {"variants": {
-           "": {"model": "valkdrive:block/stargate_base_block"}
+           "": {"model": "valkdrive:block/valkgate_controller_block"}
       }},
-  "models/block/stargate_base_block.json":
+  "blockstates/valkgate_aligner_block.json":
+      {"variants": {
+           "": {"model": "valkdrive:block/valkgate_aligner_block"}
+      }},
+  "blockstates/ship_controller_block.json":
+      {"variants": {
+           "": {"model": "valkdrive:block/ship_controller_block"}
+      }},
+  "blockstates/ship_aligner_block.json":
+      {"variants": {
+           "": {"model": "valkdrive:block/ship_aligner_block"}
+      }},
+  "blockstates/laser_medium_block.json":
+      {"variants": {
+           "": {"model": "valkdrive:block/laser_medium_block"}
+      }},
+  "blockstates/radar_block.json":
+      {"variants": {
+           "": {"model": "valkdrive:block/radar_block"}
+      }},
+  "blockstates/cloak_controller_block.json":
+      {"variants": {
+           "": {"model": "valkdrive:block/cloak_controller_block"}
+      }},
+  "blockstates/cloak_coil_block.json":
+      {"variants": {
+           "": {"model": "valkdrive:block/cloak_coil_block"}
+      }},
+  
+  
+  
+  "models/block/valkgate_controller_block.json":
       {"parent": "block/cube_all",
        "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
-  "models/item/stargate_base_block.json":
-      {"parent": "valkdrive:block/stargate_base_block"},
+  "models/block/valkgate_aligner_block.json":
+      {"parent": "block/cube_all",
+       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+  "models/block/ship_controller_block.json":
+      {"parent": "block/cube_all",
+       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+  "models/block/ship_aligner_block.json":
+      {"parent": "block/cube_all",
+       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+  "models/block/laser_medium_block.json":
+      {"parent": "block/cube_all",
+       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+  "models/block/radar_block.json":
+      {"parent": "block/cube_all",
+       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+  "models/block/cloak_controller_block.json":
+      {"parent": "block/cube_all",
+       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+  "models/block/cloak_coil_block.json":
+      {"parent": "block/cube_all",
+       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+  
+  
+  
+  "models/item/valkgate_aligner_block.json":
+      {"parent": "valkdrive:block/valkgate_aligner_block"},
+  "models/item/valkgate_controller_block.json":
+      {"parent": "valkdrive:block/valkgate_controller_block"},
+  "models/item/ship_controller_block.json":
+      {"parent": "valkdrive:block/ship_controller_block"},
+  "models/item/ship_aligner_block.json":
+      {"parent": "valkdrive:block/ship_aligner_block"},
+  "models/item/laser_medium_block.json":
+      {"parent": "valkdrive:block/laser_medium_block"},
+  "models/item/radar_block.json":
+      {"parent": "valkdrive:block/radar_block"},
+  "models/item/cloak_controller_block.json":
+      {"parent": "valkdrive:block/cloak_controller_block"},
+  "models/item/cloak_coil_block.json":
+      {"parent": "valkdrive:block/cloak_coil_block"},
+  
+  
+  
   "models/item/star_mechanism_item.json":
       {"parent": "minecraft:item/generated",
        "textures": {"layer0": "valkdrive:items/star_mechanism"}},

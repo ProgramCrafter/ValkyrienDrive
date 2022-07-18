@@ -12,7 +12,7 @@ import org.octechnics.valkdrive.ValkyrienDrive;
 
 public class %s extends BlockItem {
     public %s() {
-        super(ValkyrienDrive.%s.get(),
+        super(ValkyrienDrive.registry_blocks.%s.get(),
               new Properties() /* .tab(ItemGroup.COMMON) */ );
     }
 }

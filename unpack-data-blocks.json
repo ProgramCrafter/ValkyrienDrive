@@ -1,3 +1,10 @@
 {
-  "stargate_base_block": ["standard", "StargateBaseBlock"]
+  "valkgate_controller_block": [  "standard", "ValkgateControllerBlock", "VALKGATE_CONTR_BLOCK"],
+  "valkgate_aligner_block":    ["standard", "ValkgateAlignerBlock",      "VALKGATE_ALIGN_BLOCK"],
+  "ship_controller_block":     [  "standard", "ShipControllerBlock",     "SHIP_CONTR_BLOCK"],
+  "ship_aligner_block":        ["standard", "ShipAlignerBlock",          "SHIP_ALIGN_BLOCK"],
+  "laser_medium_block":        [  "standard", "LaserMediumBlock",        "LASER_BLOCK"],
+  "radar_block":               [  "standard", "RadarBlock",              "RADAR_BLOCK"],
+  "cloak_controller_block":    [  "standard", "CloakControllerBlock",    "CLOAK_CONTR_BLOCK"],
+  "cloak_coil_block":          ["standard", "CloakCoilBlock",            "CLOAK_COIL_BLOCK"]
 }

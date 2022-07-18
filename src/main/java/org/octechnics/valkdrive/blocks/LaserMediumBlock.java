@@ -9,8 +9,8 @@ import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
 
-public class StargateBaseBlock extends Block {
-    public StargateBaseBlock() {
+public class LaserMediumBlock extends Block {
+    public LaserMediumBlock() {
         super(Properties.of(Material.METAL)
                         .sound(SoundType.METAL)
                      /* .harvestTool(ToolType.PICKAXE) */ );

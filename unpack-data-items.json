@@ -1,4 +1,12 @@
 {
-  "stargate_base_block": ["block", "StargateBaseBlockItem", "STARGATE_BASE_BLOCK"],
-  "star_mechanism_item": ["item",  "StarMechanismItem"]
+  "star_mechanism_item":       ["item",  "StarMechanismItem"],
+  
+  "valkgate_controller_block": ["block", "ValkgateControllerBlockItem", "VALKGATE_CONTR_BLOCK"],
+  "valkgate_aligner_block":    ["block", "ValkgateAlignerBlockItem",    "VALKGATE_ALIGN_BLOCK"],
+  "ship_controller_block":     ["block", "ShipControllerBlockItem",     "SHIP_CONTR_BLOCK"],
+  "ship_aligner_block":        ["block", "ShipAlignerBlockItem",        "SHIP_ALIGN_BLOCK"],
+  "laser_medium_block":        ["block", "LaserMediumBlockItem",        "LASER_BLOCK"],
+  "radar_block":               ["block", "RadarBlockItem",              "RADAR_BLOCK"],
+  "cloak_controller_block":    ["block", "CloakControllerBlockItem",    "CLOAK_CONTR_BLOCK"],
+  "cloak_coil_block":          ["block", "CloakCoilBlockItem",          "CLOAK_COIL_BLOCK"]
 }
