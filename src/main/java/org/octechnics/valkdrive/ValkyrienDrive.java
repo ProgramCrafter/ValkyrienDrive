@@ -12,10 +12,8 @@ import net.minecraft.world.item.Item;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.List;
-
-// use org.octechnics.valkdrive.StargateBaseBlock;
 import org.octechnics.valkdrive.items.StargateBaseBlockItem;
+import org.octechnics.valkdrive.blocks.StargateBaseBlock;
 import org.octechnics.valkdrive.items.StarMechanismItem;
 
 @Mod(ValkyrienDrive.MOD_ID)

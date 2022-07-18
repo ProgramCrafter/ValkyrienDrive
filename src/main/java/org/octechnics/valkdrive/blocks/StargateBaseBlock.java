@@ -1,4 +1,4 @@
-package org.octechnics.valkdrive;  // TODO: move to package (...).blocks
+package org.octechnics.valkdrive.blocks;
 
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,3 +20,4 @@ public class StargateBaseBlock extends Block {
         return List.of(new ItemStack(this));
     }
 }
+
