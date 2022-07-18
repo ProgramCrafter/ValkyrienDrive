@@ -1,3 +1,4 @@
+```
 [ ] Refactor :) StargateBaseBlock and SBBlockItem  
 [ ] Establish API for conveniently adding blocks  
 [ ] Establish API for conveniently adding items  
@@ -26,4 +27,5 @@
 
 [ ] Find some more programmers or coders  
 [ ] Write remaining parts of TODO  
-[ ] Find way to make \[ \] look like checkbox and not like square brackets in file on Github
+[V] Find way to make \[ \] look like checkbox and not like square brackets in file on Github
+```
