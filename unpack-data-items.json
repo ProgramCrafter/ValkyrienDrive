@@ -1,0 +1,4 @@
+{
+  "stargate_base_block": ["block", "StargateBaseBlockItem", "STARGATE_BASE_BLOCK"],
+  "star_mechanism_item": ["item",  "StarMechanismItem"]
+}

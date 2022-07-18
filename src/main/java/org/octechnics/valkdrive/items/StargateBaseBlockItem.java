@@ -1,12 +1,8 @@
-package org.octechnics.valkdrive;  // TODO: move to package (...).items
+package org.octechnics.valkdrive.items;
 
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 
-import java.util.List;
-
-// use org.octechnics.valkdrive.StargateBaseBlock;
-// use org.octechnics.valkdrive.ValkyrienDrive;
+import org.octechnics.valkdrive.ValkyrienDrive;
 
 public class StargateBaseBlockItem extends BlockItem {
     public StargateBaseBlockItem() {

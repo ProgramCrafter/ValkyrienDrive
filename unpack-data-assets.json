@@ -1,0 +1,20 @@
+{
+  "lang/en_us.json":
+    {"block.valkdrive.stargate_base_block": "Stargate Base",
+     "item.valkdrive.star_mechanism_item": "Star Mechanism"},
+  "lang/ru_ru.json":
+    {"block.valkdrive.stargate_base_block": "Основа звёздных врат",
+     "item.valkdrive.star_mechanism_item": "Звёздный корпус механизма"},
+  "blockstates/stargate_base_block.json":
+    {"variants": {
+         "": {"model": "valkdrive:block/stargate_base_block"}
+    }},
+  "models/block/stargate_base_block.json":
+    {"parent": "block/cube_all",
+     "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+  "models/item/stargate_base_block.json":
+    {"parent": "valkdrive:block/stargate_base_block"},
+  "models/item/star_mechanism_item.json":
+    {"parent": "minecraft:item/generated",
+     "textures": {"layer0": "valkdrive:items/star_mechanism"}}
+}

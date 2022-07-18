@@ -15,7 +15,8 @@ import org.apache.logging.log4j.Logger;
 import java.util.List;
 
 // use org.octechnics.valkdrive.StargateBaseBlock;
-// use org.octechnics.valkdrive.StargateBaseBlockItem;
+import org.octechnics.valkdrive.items.StargateBaseBlockItem;
+import org.octechnics.valkdrive.items.StarMechanismItem;
 
 @Mod(ValkyrienDrive.MOD_ID)
 public class ValkyrienDrive {
@@ -29,6 +30,8 @@ public class ValkyrienDrive {
         BLOCKS.register("stargate_base_block",  StargateBaseBlock::new);
     public static final RegistryObject<Item> STARGATE_BASE_BITEM =
         ITEMS.register("stargate_base_block", StargateBaseBlockItem::new);
+    public static final RegistryObject<Item> STAR_MECHANISM_ITEM =
+        ITEMS.register("star_mechanism_item", StarMechanismItem::new);
     
     public static final String MOD_ID = "valkdrive";
     
