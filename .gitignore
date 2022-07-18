@@ -28,3 +28,4 @@ forge*changelog.txt
 
 ### Additional ignores
 build.bat
+commit.bat

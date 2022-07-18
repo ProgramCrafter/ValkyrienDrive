@@ -1,7 +1,7 @@
 [ ] Refactor :) StargateBaseBlock and SBBlockItem  
 [ ] Establish API for conveniently adding blocks  
 [ ] Establish API for conveniently adding items  
-[ ] Make script auto-generating models JSONs or decide this script is not needed  
+[V] Make script auto-generating models JSONs or decide this script is not needed  
 [ ] Add OC2 to dependencies  
 [ ] Create stargate controller  
 [ ] Create block entity for stargate controller  
