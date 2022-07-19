@@ -1,12 +1,11 @@
 ```
-[ ] Refactor :) StargateBaseBlock and SBBlockItem  
-[ ] Establish API for conveniently adding blocks  
-[ ] Establish API for conveniently adding items  
+[*] Establish API for conveniently adding blocks  
+[V] Establish API for conveniently adding items  
 [V] Make script auto-generating models JSONs or decide this script is not needed  
 [ ] Add OC2 to dependencies  
-[ ] Create stargate controller  
-[ ] Create block entity for stargate controller  
-[ ] Implement stargate aligner (like controller and core in WarpDrive)  
+[V] Create stargate controller  
+[V] Create block entity for stargate controller  
+[V] Implement stargate aligner (like controller and core in WarpDrive)  
 [ ] Establish first API version for OC2  
 [ ] Implement energy interfaces for IC2 and RF-compatible mods  
 [ ] Add stargate model from SGCraft  
