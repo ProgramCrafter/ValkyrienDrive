@@ -14,6 +14,13 @@ Sci-fi mod for Minecraft with benefits of WarpDrive, Valkyrien Skies and SGCraft
 - [SGCraft](https://github.com/gcewing/SGCraft/tree/mc1.7/)
 - [OpenComputers 2](https://github.com/fnuecke/oc2)
 
+### Development blocked on
+Release of either of these:
+| Mod | Status | Issues |
+| --- | ------ | ------ |
+| Valkyrien Skies 2 | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ValkyrienSkies/Valkyrien-Skies-2?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues-raw/ValkyrienSkies/Valkyrien-Skies-2?style=flat-square) |
+| OpenComputers 2 | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/fnuecke/oc2?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues-raw/fnuecke/oc2?style=flat-square) |
+
 ### Ideas
 
 - ships like in Valkyrien Skies
@@ -42,11 +49,9 @@ Sci-fi mod for Minecraft with benefits of WarpDrive, Valkyrien Skies and SGCraft
 
 ### Progress
 
-| Stage        | State       |
-| ------------ | ----------- |
-| Designing    | in progress |
-| Development  | in progress |
-| Testing      | not started |
+![](https://img.shields.io/badge/designing-in%20progress-5f7?style=for-the-badge)  
+![](https://img.shields.io/badge/development-in%20progress-5f7?style=for-the-badge)  
+![](https://img.shields.io/badge/testing-not%20started-ff7?style=for-the-badge)
 
 At the moment, this repository is RFC for collecting useful ideas.
 
