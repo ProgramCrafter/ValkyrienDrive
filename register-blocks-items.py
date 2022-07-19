@@ -20,6 +20,8 @@ with open(base + '/unpack-data-items.json', encoding='utf-8') as f:
 code = '''package org.octechnics.valkdrive;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -30,6 +32,13 @@ import net.minecraft.world.item.Item;
 
 for name, block in blocks.items():
   code += f'import org.octechnics.valkdrive.blocks.{block[1]};\n'
+
+code += '\n'
+
+for name, block in blocks.items():
+  if block[0] != 'tile': continue
+  
+  code += f'import org.octechnics.valkdrive.tile.{block[1].replace("Block", "BE")};\n'
 
 code += '\n'
 
@@ -44,12 +53,24 @@ public class BlocksItemsRegistryHelper {
         DeferredRegister.create(ForgeRegistries.BLOCKS, ValkyrienDrive.MOD_ID);
     private static final DeferredRegister<Item> ITEMS =
         DeferredRegister.create(ForgeRegistries.ITEMS, ValkyrienDrive.MOD_ID);
+    private static final DeferredRegister<BlockEntityType<?>> TILES =
+        DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, ValkyrienDrive.MOD_ID);
     
 '''
 
 for name, block in blocks.items():
   code += f'    public static final RegistryObject<Block> {block[2]} =\n'
   code += f'        BLOCKS.register("{name}", {block[1]}::new);\n'
+
+code += '\n'
+
+for name, block in blocks.items():
+  if block[0] != 'tile': continue
+  tile_name = block[1].replace('Block', 'BE')
+  tile_var = block[2].replace('_BLOCK', '_TILE')
+  
+  code += f'    public static final RegistryObject<BlockEntityType<{tile_name}>> {tile_var} =\n'
+  code += f'        TILES.register("{name}", () -> BlockEntityType.Builder.of({tile_name}::new, {block[2]}.get()).build(null));\n'
 
 code += '\n'
 
@@ -64,6 +85,9 @@ code += '''
         
         ValkyrienDrive.logger.info("valkdrive - requesting to register items");
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        
+        ValkyrienDrive.logger.info("valkdrive - requesting to register tile entities");
+        TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
 '''

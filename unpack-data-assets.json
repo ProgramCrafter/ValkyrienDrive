@@ -58,29 +58,71 @@
   
   
   "models/block/valkgate_controller_block.json":
-      {"parent": "block/cube_all",
-       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+      {"parent": "block/cube",
+       "textures": {
+          "particle": "valkdrive:blocks/valkgate_block",
+          "down":     "valkdrive:blocks/valkgate_block",
+          "up":       "valkdrive:blocks/valkgate_block",
+          "north":    "valkdrive:blocks/valkgate_controller_front",
+          "east":     "valkdrive:blocks/valkgate_block",
+          "south":    "valkdrive:blocks/valkgate_block",
+          "west":     "valkdrive:blocks/valkgate_block"}},
   "models/block/valkgate_aligner_block.json":
-      {"parent": "block/cube_all",
-       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+      {"parent": "block/cube",
+       "textures": {
+          "particle": "valkdrive:blocks/valkgate_block",
+          "down":     "valkdrive:blocks/valkgate_block",
+          "up":       "valkdrive:blocks/valkgate_aligner_top",
+          "north":    "valkdrive:blocks/valkgate_block",
+          "east":     "valkdrive:blocks/valkgate_block",
+          "south":    "valkdrive:blocks/valkgate_block",
+          "west":     "valkdrive:blocks/valkgate_block"}},
   "models/block/ship_controller_block.json":
-      {"parent": "block/cube_all",
-       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+      {"parent": "block/cube",
+       "textures": {
+          "particle": "valkdrive:blocks/valkship_block",
+          "down":     "valkdrive:blocks/valkship_block",
+          "up":       "valkdrive:blocks/valkship_block",
+          "north":    "valkdrive:blocks/valkship_controller_front",
+          "east":     "valkdrive:blocks/valkship_block",
+          "south":    "valkdrive:blocks/valkship_block",
+          "west":     "valkdrive:blocks/valkship_block"}},
   "models/block/ship_aligner_block.json":
-      {"parent": "block/cube_all",
-       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+      {"parent": "block/cube",
+       "textures": {
+          "particle": "valkdrive:blocks/valkship_block",
+          "down":     "valkdrive:blocks/valkship_block",
+          "up":       "valkdrive:blocks/valkship_aligner_top",
+          "north":    "valkdrive:blocks/valkship_block",
+          "east":     "valkdrive:blocks/valkship_block",
+          "south":    "valkdrive:blocks/valkship_block",
+          "west":     "valkdrive:blocks/valkship_block"}},
   "models/block/laser_medium_block.json":
-      {"parent": "block/cube_all",
-       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+      {"parent": "block/cube",
+       "textures": {
+          "particle": "valkdrive:blocks/laser_block",
+          "down":     "valkdrive:blocks/laser_block",
+          "up":       "valkdrive:blocks/laser_block",
+          "north":    "valkdrive:blocks/laser_block_active_side",
+          "east":     "valkdrive:blocks/laser_block",
+          "south":    "valkdrive:blocks/laser_block",
+          "west":     "valkdrive:blocks/laser_block"}},
   "models/block/radar_block.json":
-      {"parent": "block/cube_all",
-       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+      {"parent": "block/cube",
+       "textures": {
+          "particle": "valkdrive:blocks/radar_bottom",
+          "down":     "valkdrive:blocks/radar_bottom",
+          "up":       "valkdrive:blocks/radar_top",
+          "north":    "valkdrive:blocks/radar_side",
+          "east":     "valkdrive:blocks/radar_side",
+          "south":    "valkdrive:blocks/radar_side",
+          "west":     "valkdrive:blocks/radar_side"}},
   "models/block/cloak_controller_block.json":
       {"parent": "block/cube_all",
-       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+       "textures": {"all": "valkdrive:blocks/valkship_controller_front"}},
   "models/block/cloak_coil_block.json":
       {"parent": "block/cube_all",
-       "textures": {"all": "valkdrive:blocks/stargate_base-front"}},
+       "textures": {"all": "valkdrive:blocks/cloaking_coil"}},
   
   
   

@@ -1,5 +1,5 @@
 {
-  "valkgate_controller_block": [  "standard", "ValkgateControllerBlock", "VALKGATE_CONTR_BLOCK"],
+  "valkgate_controller_block": ["tile",     "ValkgateControllerBlock",   "VALKGATE_CONTR_BLOCK"],
   "valkgate_aligner_block":    ["standard", "ValkgateAlignerBlock",      "VALKGATE_ALIGN_BLOCK"],
   "ship_controller_block":     [  "standard", "ShipControllerBlock",     "SHIP_CONTR_BLOCK"],
   "ship_aligner_block":        ["standard", "ShipAlignerBlock",          "SHIP_ALIGN_BLOCK"],

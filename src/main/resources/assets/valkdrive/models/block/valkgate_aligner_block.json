@@ -1,1 +1,1 @@
-{"parent": "block/cube_all", "textures": {"all": "valkdrive:blocks/stargate_base-front"}}
+{"parent": "block/cube", "textures": {"particle": "valkdrive:blocks/valkgate_block", "down": "valkdrive:blocks/valkgate_block", "up": "valkdrive:blocks/valkgate_aligner_top", "north": "valkdrive:blocks/valkgate_block", "east": "valkdrive:blocks/valkgate_block", "south": "valkdrive:blocks/valkgate_block", "west": "valkdrive:blocks/valkgate_block"}}

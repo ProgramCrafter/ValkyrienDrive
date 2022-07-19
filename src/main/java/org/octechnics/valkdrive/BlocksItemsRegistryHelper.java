@@ -1,6 +1,8 @@
 package org.octechnics.valkdrive;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -15,6 +17,8 @@ import org.octechnics.valkdrive.blocks.LaserMediumBlock;
 import org.octechnics.valkdrive.blocks.RadarBlock;
 import org.octechnics.valkdrive.blocks.CloakControllerBlock;
 import org.octechnics.valkdrive.blocks.CloakCoilBlock;
+
+import org.octechnics.valkdrive.tile.ValkgateControllerBE;
 
 import org.octechnics.valkdrive.items.StarMechanismItem;
 import org.octechnics.valkdrive.items.ValkgateControllerBlockItem;
@@ -33,6 +37,8 @@ public class BlocksItemsRegistryHelper {
         DeferredRegister.create(ForgeRegistries.BLOCKS, ValkyrienDrive.MOD_ID);
     private static final DeferredRegister<Item> ITEMS =
         DeferredRegister.create(ForgeRegistries.ITEMS, ValkyrienDrive.MOD_ID);
+    private static final DeferredRegister<BlockEntityType<?>> TILES =
+        DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, ValkyrienDrive.MOD_ID);
     
     public static final RegistryObject<Block> VALKGATE_CONTR_BLOCK =
         BLOCKS.register("valkgate_controller_block", ValkgateControllerBlock::new);
@@ -50,6 +56,9 @@ public class BlocksItemsRegistryHelper {
         BLOCKS.register("cloak_controller_block", CloakControllerBlock::new);
     public static final RegistryObject<Block> CLOAK_COIL_BLOCK =
         BLOCKS.register("cloak_coil_block", CloakCoilBlock::new);
+
+    public static final RegistryObject<BlockEntityType<ValkgateControllerBE>> VALKGATE_CONTR_TILE =
+        TILES.register("valkgate_controller_block", () -> BlockEntityType.Builder.of(ValkgateControllerBE::new, VALKGATE_CONTR_BLOCK.get()).build(null));
 
     public static final RegistryObject<Item> STAR_MECHANIS_ITEM =
         ITEMS.register("star_mechanism_item", StarMechanismItem::new);
@@ -76,5 +85,8 @@ public class BlocksItemsRegistryHelper {
         
         ValkyrienDrive.logger.info("valkdrive - requesting to register items");
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        
+        ValkyrienDrive.logger.info("valkdrive - requesting to register tile entities");
+        TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
