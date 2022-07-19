@@ -67,35 +67,4 @@ public class ValkgateControllerBE extends BlockEntity {
             nbt.putBoolean("valid_assembly", false);
         }
     }
-    
-    /*
-    @Override
-    public SUpdateBlockEntityPacket getUpdatePacket() {
-        return new UpdatePacket(write(new CompoundTag()));
-    }
-    @Override
-    public void onDataPacket(NetworkManager net, SUpdateBlockEntityPacket pkt) {
-        read((UpdatePacket)pkt.nbt);
-    }
-
-    static class UpdatePacket extends SUpdateBlockEntityPacket {
-        public CompoundTag nbt;
-
-        public UpdatePacket(CompoundTag _nbt) {
-            nbt = _nbt;
-        }
-
-        @Override
-        public void readPacketData(PacketBuffer buffer) throws IOException {
-            buffer.writeNBT(nbt);
-            super.readPacketData(buffer);
-        }
-
-        @Override
-        public void writePacketData(PacketBuffer buffer) throws IOException {
-            nbt = buffer.readNBT();
-            super.writePacketData(buffer);
-        }
-    }
-    */
 }
