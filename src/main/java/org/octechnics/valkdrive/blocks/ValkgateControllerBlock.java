@@ -2,17 +2,22 @@
 
 package org.octechnics.valkdrive.blocks;
 
+import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -27,6 +32,12 @@ import org.octechnics.valkdrive.ValkyrienDrive;
 // use org.octechnics.valkdrive.blocks.ValkgateAlignerBlock;
 
 public class ValkgateControllerBlock extends Block implements EntityBlock {
+    protected static final VoxelShape AABB = 
+      Shapes.or(
+        Block.box(0.0D, 0.0D, 0.0D, 16.0D, 15.0D, 16.0D),
+        Block.box(1.0D, 15.0D, 1.0D, 15.0D, 16.0D, 15.0D)
+      );
+    
     public ValkgateControllerBlock() {
         super(Properties.of(Material.METAL)
                         .sound(SoundType.METAL)
@@ -84,6 +95,47 @@ public class ValkgateControllerBlock extends Block implements EntityBlock {
     @Override
     public RenderShape getRenderShape(final BlockState state) {
         return RenderShape.MODEL;
+    }
+    
+    @Override
+    public boolean useShapeForLightOcclusion(BlockState state) {
+        return false;
+    }
+    
+    
+    @Override
+    public boolean hasDynamicShape() {
+        return true;
+    }
+    
+    @Override
+    public VoxelShape getOcclusionShape(BlockState state, BlockGetter level, BlockPos pos) {
+        return AABB;
+    }
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos,
+                               CollisionContext ctx) {
+        return AABB;
+    }
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos,
+                                        CollisionContext ctx) {
+        return getShape(state, level, pos, ctx);
+    }
+    @Override
+    public VoxelShape getVisualShape(BlockState state, BlockGetter level, BlockPos pos,
+                                     CollisionContext ctx) {
+        return getShape(state, level, pos, ctx);
+    }
+    @Override
+    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos,
+                                  PathComputationType pct) {
+        return false;
+    }
+    
+    @Override
+    public boolean skipRendering(BlockState cur, BlockState other, Direction dir) {
+        return false;
     }
     
     @Override
