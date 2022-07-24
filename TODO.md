@@ -1,14 +1,14 @@
 ```
-[*] Establish API for conveniently adding blocks  
+[V] Establish API for conveniently adding blocks  
 [V] Establish API for conveniently adding items  
 [V] Make script auto-generating models JSONs or decide this script is not needed  
 [ ] Add OC2 to dependencies  
 [V] Create stargate controller  
 [V] Create block entity for stargate controller  
-[V] Implement stargate aligner (like controller and core in WarpDrive)  
+[*] Implement stargate aligner (like controller and core in WarpDrive)  
 [ ] Establish first API version for OC2  
 [ ] Implement energy interfaces for IC2 and RF-compatible mods  
-[ ] Add stargate model from SGCraft  
+[*] Add stargate model from SGCraft  
 [ ] Implement deactivating model and stargate if some block is intersecting it  
 [ ] Add opened stargate model  
 [ ] Implement first version of addressing system  
@@ -18,7 +18,7 @@
 [ ] Add instability effect damaging all entities on way of pure energy from stargate  
 
 [ ] Create ship controller and aligner  
-[ ] Clone VS2 and integrate its mechanics here  
+[ ] Add VS2 to dependencies  
 [ ] Create instability effect on ship assembly/disassembly  
 [ ] Decide what to do if some ship of medium size cannot fully fit in stargate but tries to teleport  
 [ ] Decide how to keep stargate address same(?) when ship assembles or disassembles  

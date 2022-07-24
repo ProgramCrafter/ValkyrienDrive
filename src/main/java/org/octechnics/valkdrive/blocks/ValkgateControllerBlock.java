@@ -34,8 +34,9 @@ import org.octechnics.valkdrive.ValkyrienDrive;
 public class ValkgateControllerBlock extends Block implements EntityBlock {
     protected static final VoxelShape AABB = 
       Shapes.or(
-        Block.box(0.0D, 0.0D, 0.0D, 16.0D, 15.0D, 16.0D),
-        Block.box(1.0D, 15.0D, 1.0D, 15.0D, 16.0D, 15.0D)
+        Block.box(0.0D, 0.0D, 0.0D, 64.0D, 16.0D, 16.0D),
+        Block.box(0.0D, 16.0D, 0.0D, 80.0D, 48.0D, 16.0D),
+        Block.box(16.0D, 48.0D, 0.0D, 64.0D, 64.0D, 16.0D)
       );
     
     public ValkgateControllerBlock() {

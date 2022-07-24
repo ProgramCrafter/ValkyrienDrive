@@ -1,12 +1,19 @@
 package org.octechnics.valkdrive;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 
 import org.octechnics.valkdrive.blocks.ValkgateControllerBlock;
@@ -30,6 +37,8 @@ import org.octechnics.valkdrive.items.RadarBlockItem;
 import org.octechnics.valkdrive.items.CloakControllerBlockItem;
 import org.octechnics.valkdrive.items.CloakCoilBlockItem;
 
+// use org.octechnics.valkdrive.ValkgateRenderer;
+// use org.octechnics.valkdrive.ValkgateEntity;
 // use org.octechnics.valkdrive.ValkyrienDrive;
 
 public class BlocksItemsRegistryHelper {
@@ -39,6 +48,8 @@ public class BlocksItemsRegistryHelper {
         DeferredRegister.create(ForgeRegistries.ITEMS, ValkyrienDrive.MOD_ID);
     private static final DeferredRegister<BlockEntityType<?>> TILES =
         DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, ValkyrienDrive.MOD_ID);
+    private static final DeferredRegister<EntityType<?>> ENTITIES =
+        DeferredRegister.create(ForgeRegistries.ENTITIES, ValkyrienDrive.MOD_ID);
     
     public static final RegistryObject<Block> VALKGATE_CONTR_BLOCK =
         BLOCKS.register("valkgate_controller_block", ValkgateControllerBlock::new);
@@ -79,6 +90,14 @@ public class BlocksItemsRegistryHelper {
     public static final RegistryObject<Item> CLOAK_COIL_BLOCK_ITEM =
         ITEMS.register("cloak_coil_block", CloakCoilBlockItem::new);
 
+
+    public static final RegistryObject<EntityType<ValkgateEntity>> VALKGATE_ENTITY = ENTITIES.register("valkgate_entity",
+      () -> EntityType.Builder.<ValkgateEntity>of(ValkgateEntity::new, MobCategory.MISC)
+        .fireImmune()
+        .canSpawnFarFromPlayer()
+        .sized(4.0F, 4.0F)
+        .clientTrackingRange(10).build("valkgate_entity"));
+    
     public void initialize() {
         ValkyrienDrive.logger.info("valkdrive - requesting to register blocks");
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -88,5 +107,17 @@ public class BlocksItemsRegistryHelper {
         
         ValkyrienDrive.logger.info("valkdrive - requesting to register tile entities");
         TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        
+        ValkyrienDrive.logger.info("valkdrive - requesting to register entities");
+        ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        
+        FMLJavaModLoadingContext.get().getModEventBus().register(this);
+    }
+    
+    @SubscribeEvent
+    @OnlyIn(Dist.CLIENT)
+    public void client_initialize(FMLClientSetupEvent e) {
+        ValkyrienDrive.logger.info("valkdrive - requesting to register entity renderers");
+        EntityRenderers.register(VALKGATE_ENTITY.get(), ValkgateRenderer<ValkgateEntity>::new);
     }
 }

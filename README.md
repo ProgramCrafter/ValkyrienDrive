@@ -16,10 +16,10 @@ Sci-fi mod for Minecraft with benefits of WarpDrive, Valkyrien Skies and SGCraft
 
 ### Development blocked on
 Release of either of these:
-| Mod | Status | Issues |
-| --- | ------ | ------ |
-| Valkyrien Skies 2 | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ValkyrienSkies/Valkyrien-Skies-2?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues-raw/ValkyrienSkies/Valkyrien-Skies-2?style=flat-square) |
-| OpenComputers 2 | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/fnuecke/oc2?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues-raw/fnuecke/oc2?style=flat-square) |
+| Mod | Status | Issues | Milestone |
+| --- | ------ | ------ | --------- |
+| Valkyrien Skies 2 | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ValkyrienSkies/Valkyrien-Skies-2?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues-raw/ValkyrienSkies/Valkyrien-Skies-2?style=flat-square) | ![GitHub milestone](https://img.shields.io/github/milestones/progress-percent/ValkyrienSkies/Valkyrien-Skies-2/1?style=flat-square) |
+| OpenComputers 2 | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/fnuecke/oc2?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues-raw/fnuecke/oc2?style=flat-square) | ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/fnuecke/oc2?include_prereleases&label=prerelease&style=flat-square) |
 
 ### Ideas
 
