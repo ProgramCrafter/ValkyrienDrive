@@ -19,10 +19,10 @@ with open(base + '/unpack-data-items.json', encoding='utf-8') as f:
 
 code = '''package org.octechnics.valkdrive;
 
+import net.minecraftforge.client.event.EntityRenderersEvent.RegisterRenderers;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.DeferredRegister;
@@ -116,9 +116,10 @@ code += '''
     
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
-    public void client_initialize(FMLClientSetupEvent e) {
+    public void client_initialize_entity_renders(RegisterRenderers e) {
         ValkyrienDrive.logger.info("valkdrive - requesting to register entity renderers");
-        EntityRenderers.register(VALKGATE_ENTITY.get(), ValkgateRenderer<ValkgateEntity>::new);
+        
+        e.registerEntityRenderer(VALKGATE_ENTITY.get(), ValkgateRenderer<ValkgateEntity>::new);
     }
 }
 '''

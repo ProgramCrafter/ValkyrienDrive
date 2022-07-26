@@ -17,6 +17,8 @@ public class ValkgateRenderer<T extends ValkgateEntity> extends EntityRenderer<T
 
    public ValkgateRenderer(EntityRendererProvider.Context ctx) {
       super(ctx);
+        
+        ValkyrienDrive.logger.info("valkdrive - valkgate renderer created");
    }
 
    public ResourceLocation getTextureLocation(T entity) {
@@ -24,9 +26,6 @@ public class ValkgateRenderer<T extends ValkgateEntity> extends EntityRenderer<T
    }
 
    protected void scale(T entity, PoseStack poses, float v) {
-      float f = 1.0F;
-      float f1 = 4.5F;
-      float f2 = 4.5F;
-      poses.scale(4.5F, 4.5F, 4.5F);
+      // intentionally blank
    }
 }
