@@ -12,6 +12,8 @@ import net.minecraft.util.Mth;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 // use org.octechnics.valkdrive.ValkgateEntity;
 
@@ -28,23 +30,24 @@ public class ValkgateEntityModel<T extends ValkgateEntity> extends EntityModel<T
         
         ArrayList<ModelPart.Cube> cubes = new ArrayList<>();
         
-    	cubes.add(
+    	cubes.add(  // bottom //
           new ModelPart.Cube(0, 0,
               16.0F,0.0F,0.0F,   48.0F,16.0F,16.0F,   0.0F,0.0F,0.0F,
-              false, 1.0F, 1.0F)
+              false, 16.0F, 16.0F)
         );
-    	cubes.add(
+    	cubes.add(  // middle //
           new ModelPart.Cube(0, 0,
               0.0F,16.0F,0.0F,   80.0F,16.0F,16.0F,   0.0F,0.0F,0.0F,
-              false, 1.0F, 1.0F)
+              false, 16.0F, 16.0F)
         );
-    	cubes.add(
+    	cubes.add(  // top //
           new ModelPart.Cube(0, 0,
               16.0F,32.0F,0.0F,  48.0F,16.0F,16.0F,   0.0F,0.0F,0.0F,
-              false, 1.0F, 1.0F)
+              false, 16.0F, 16.0F)
         );
     	
-        model = new ModelPart(cubes, new HashMap());
+        model = new ModelPart((List<ModelPart.Cube>)(cubes),
+                              (Map<String, ModelPart>)(new HashMap()));
     }
     
     @Override
