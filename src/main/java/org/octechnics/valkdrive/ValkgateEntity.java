@@ -20,8 +20,6 @@ public class ValkgateEntity extends HangingEntity {
     
     public ValkgateEntity(EntityType<? extends ValkgateEntity> entity_type, Level level) {
         super(entity_type, level);
-        
-        ValkyrienDrive.logger.info("valkdrive - valkgate entity created");
     }
     
     @Override
