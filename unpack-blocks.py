@@ -21,10 +21,6 @@ public class %s extends Block {
                         .sound(SoundType.METAL)
                      /* .harvestTool(ToolType.PICKAXE) */ );
     }
-    @Override
-    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        return List.of(new ItemStack(this));
-    }
 }
 
 ''')

@@ -57,6 +57,49 @@
   
   
   
+  "../../data/valkdrive/loot_tables/blocks/valkgate_controller_block.json":
+      {"type": "minecraft:block", "pools": [
+         {"rolls": 1.0, "bonus_rolls": 0.0, "entries": [{"type": "minecraft:item", "name": "valkdrive:valkgate_controller_block"}],
+          "conditions": [{"condition": "minecraft:survives_explosion"}]}
+       ]},
+  "../../data/valkdrive/loot_tables/blocks/valkgate_aligner_block.json":
+      {"type": "minecraft:block", "pools": [
+         {"rolls": 1.0, "bonus_rolls": 0.0, "entries": [{"type": "minecraft:item", "name": "valkdrive:valkgate_aligner_block"}],
+          "conditions": [{"condition": "minecraft:survives_explosion"}]}
+       ]},
+  "../../data/valkdrive/loot_tables/blocks/ship_controller_block.json":
+      {"type": "minecraft:block", "pools": [
+         {"rolls": 1.0, "bonus_rolls": 0.0, "entries": [{"type": "minecraft:item", "name": "valkdrive:ship_controller_block"}],
+          "conditions": [{"condition": "minecraft:survives_explosion"}]}
+       ]},
+  "../../data/valkdrive/loot_tables/blocks/ship_aligner_block.json":
+      {"type": "minecraft:block", "pools": [
+         {"rolls": 1.0, "bonus_rolls": 0.0, "entries": [{"type": "minecraft:item", "name": "valkdrive:ship_aligner_block"}],
+          "conditions": [{"condition": "minecraft:survives_explosion"}]}
+       ]},
+  "../../data/valkdrive/loot_tables/blocks/laser_medium_block.json":
+      {"type": "minecraft:block", "pools": [
+         {"rolls": 1.0, "bonus_rolls": 0.0, "entries": [{"type": "minecraft:item", "name": "valkdrive:laser_medium_block"}],
+          "conditions": [{"condition": "minecraft:survives_explosion"}]}
+       ]},
+  "../../data/valkdrive/loot_tables/blocks/radar_block.json":
+      {"type": "minecraft:block", "pools": [
+         {"rolls": 1.0, "bonus_rolls": 0.0, "entries": [{"type": "minecraft:item", "name": "valkdrive:radar_block"}],
+          "conditions": [{"condition": "minecraft:survives_explosion"}]}
+       ]},
+  "../../data/valkdrive/loot_tables/blocks/cloak_controller_block.json":
+      {"type": "minecraft:block", "pools": [
+         {"rolls": 1.0, "bonus_rolls": 0.0, "entries": [{"type": "minecraft:item", "name": "valkdrive:cloak_controller_block"}],
+          "conditions": [{"condition": "minecraft:survives_explosion"}]}
+       ]},
+  "../../data/valkdrive/loot_tables/blocks/cloak_coil_block.json":
+      {"type": "minecraft:block", "pools": [
+         {"rolls": 1.0, "bonus_rolls": 0.0, "entries": [{"type": "minecraft:item", "name": "valkdrive:cloak_coil_block"}],
+          "conditions": [{"condition": "minecraft:survives_explosion"}]}
+       ]},
+  
+  
+  
   "models/block/valkgate_controller_block.json":
       {"parent": "block/cube",
        "textures": {
