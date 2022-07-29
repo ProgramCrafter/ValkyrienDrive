@@ -50,47 +50,93 @@ public class ValkgateEntityModel<T extends ValkgateEntity> extends EntityModel<T
         Vertex back_sm_rgt_t = new Vertex(62.0F,33.0F,2.0F,   62.0F,33.0F);
         Vertex back_sm_top_r = new Vertex(49.0F,46.0F,2.0F,   49.0F,46.0F);
         
+        Vertex fwd_top_l = new Vertex(30.0F,48.0F,16.0F,   30.0F,48.0F);
+        Vertex fwd_lft_t = new Vertex(16.0F,34.0F,16.0F,   16.0F,34.0F);
+        Vertex fwd_lft_b = new Vertex(16.0F,14.0F,16.0F,   16.0F,14.0F);
+        Vertex fwd_bot_l = new Vertex(30.0F,0.0F, 16.0F,   30.0F,0.0F);
+        Vertex fwd_bot_r = new Vertex(50.0F,0.0F, 16.0F,   50.0F,0.0F);
+        Vertex fwd_rgt_b = new Vertex(64.0F,14.0F,16.0F,   64.0F,14.0F);
+        Vertex fwd_rgt_t = new Vertex(64.0F,34.0F,16.0F,   64.0F,34.0F);
+        Vertex fwd_top_r = new Vertex(50.0F,48.0F,16.0F,   50.0F,48.0F);
+        
+        Vertex fwd_sm_top_l = new Vertex(31.0F,46.0F,16.0F,   31.0F,46.0F);
+        Vertex fwd_sm_lft_t = new Vertex(18.0F,33.0F,16.0F,   18.0F,33.0F);
+        Vertex fwd_sm_lft_b = new Vertex(18.0F,15.0F,16.0F,   18.0F,15.0F);
+        Vertex fwd_sm_bot_l = new Vertex(31.0F,2.0F, 16.0F,   31.0F,2.0F);
+        Vertex fwd_sm_bot_r = new Vertex(49.0F,2.0F, 16.0F,   49.0F,2.0F);
+        Vertex fwd_sm_rgt_b = new Vertex(62.0F,15.0F,16.0F,   62.0F,15.0F);
+        Vertex fwd_sm_rgt_t = new Vertex(62.0F,33.0F,16.0F,   62.0F,33.0F);
+        Vertex fwd_sm_top_r = new Vertex(49.0F,46.0F,16.0F,   49.0F,46.0F);
+        
         quads = new Polygon[] {
-            new Polygon(
-              new Vertex[]{back_cent,back_top_l,back_lft_t,back_lft_b},
-              8.0F,8.0F,16.0F,16.0F,16.0F,16.0F,
-              false, Direction.NORTH
-            ),
-            new Polygon(
-              new Vertex[]{back_cent,back_lft_b,back_bot_l,back_bot_r},
-              8.0F,0.0F,16.0F,8.0F,16.0F,16.0F,
-              false, Direction.NORTH
-            ),
-            new Polygon(
-              new Vertex[]{back_cent,back_bot_r,back_rgt_b,back_rgt_t},
-              0.0F,8.0F,8.0F,16.0F,16.0F,16.0F,
-              false, Direction.NORTH
-            ),
-            new Polygon(
-              new Vertex[]{back_cent,back_rgt_t,back_top_r,back_top_l},
-              0.0F,0.0F,8.0F,8.0F,16.0F,16.0F,
-              false, Direction.NORTH
-            ),
-            new Polygon(
-              new Vertex[]{back_sm_cent,back_sm_top_l,back_sm_lft_t,back_sm_lft_b},
-              0.0F,0.0F,8.0F,8.0F,16.0F,16.0F,
-              false, Direction.SOUTH
-            ),
-            new Polygon(
-              new Vertex[]{back_sm_cent,back_sm_lft_b,back_sm_bot_l,back_sm_bot_r},
-              0.0F,8.0F,8.0F,16.0F,16.0F,16.0F,
-              false, Direction.SOUTH
-            ),
-            new Polygon(
-              new Vertex[]{back_sm_cent,back_sm_bot_r,back_sm_rgt_b,back_sm_rgt_t},
-              8.0F,0.0F,16.0F,8.0F,16.0F,16.0F,
-              false, Direction.SOUTH
-            ),
-            new Polygon(
-              new Vertex[]{back_sm_cent,back_sm_rgt_t,back_sm_top_r,back_sm_top_l},
-              8.0F,8.0F,16.0F,16.0F,16.0F,16.0F,
-              false, Direction.SOUTH
-            )
+            new Polygon(new Vertex[]{back_cent,back_top_l,back_lft_t,back_lft_b},
+                        8.0F,8.0F,16.0F,16.0F,   32.0F,32.0F,   false, Direction.NORTH),
+            new Polygon(new Vertex[]{back_cent,back_lft_b,back_bot_l,back_bot_r},
+                        8.0F,0.0F,16.0F,8.0F,    32.0F,32.0F,   false, Direction.NORTH),
+            new Polygon(new Vertex[]{back_cent,back_bot_r,back_rgt_b,back_rgt_t},
+                        0.0F,8.0F,8.0F,16.0F,    32.0F,32.0F,   false, Direction.NORTH),
+            new Polygon(new Vertex[]{back_cent,back_rgt_t,back_top_r,back_top_l},
+                        0.0F,0.0F,8.0F,8.0F,     32.0F,32.0F,   false, Direction.NORTH),
+            
+            new Polygon(new Vertex[]{back_sm_cent,back_sm_top_l,back_sm_lft_t,back_sm_lft_b},
+                        0.0F,0.0F,8.0F,8.0F,     32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{back_sm_cent,back_sm_lft_b,back_sm_bot_l,back_sm_bot_r},
+                        0.0F,8.0F,8.0F,16.0F,    32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{back_sm_cent,back_sm_bot_r,back_sm_rgt_b,back_sm_rgt_t},
+                        8.0F,0.0F,16.0F,8.0F,    32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{back_sm_cent,back_sm_rgt_t,back_sm_top_r,back_sm_top_l},
+                        8.0F,8.0F,16.0F,16.0F,   32.0F,32.0F,   false, Direction.SOUTH),
+            
+            new Polygon(new Vertex[]{fwd_sm_top_r,fwd_top_r,fwd_top_l,fwd_sm_top_l},
+                        16.0F,16.0F,24.0F,20.0F, 32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{fwd_sm_top_l,fwd_top_l,fwd_lft_t,fwd_sm_lft_t},
+                        16.0F,20.0F,24.0F,24.0F, 32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{fwd_sm_lft_t,fwd_lft_t,fwd_lft_b,fwd_sm_lft_b},
+                        16.0F,24.0F,24.0F,28.0F, 32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{fwd_sm_lft_b,fwd_lft_b,fwd_bot_l,fwd_sm_bot_l},
+                        16.0F,28.0F,24.0F,32.0F, 32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{fwd_sm_bot_l,fwd_bot_l,fwd_bot_r,fwd_sm_bot_r},
+                        24.0F,16.0F,32.0F,20.0F, 32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{fwd_sm_bot_r,fwd_bot_r,fwd_rgt_b,fwd_sm_rgt_b},
+                        24.0F,20.0F,32.0F,24.0F, 32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{fwd_sm_rgt_b,fwd_rgt_b,fwd_rgt_t,fwd_sm_rgt_t},
+                        24.0F,24.0F,32.0F,28.0F, 32.0F,32.0F,   false, Direction.SOUTH),
+            new Polygon(new Vertex[]{fwd_sm_rgt_t,fwd_rgt_t,fwd_top_r,fwd_sm_top_r},
+                        24.0F,28.0F,32.0F,32.0F, 32.0F,32.0F,   false, Direction.SOUTH),
+            
+            new Polygon(new Vertex[]{fwd_top_r,back_top_r,back_top_l,fwd_top_l},
+                        0.0F,16.0F,8.0F,20.0F,   32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_top_l,back_top_l,back_lft_t,fwd_lft_t},
+                        0.0F,20.0F,8.0F,24.0F,   32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_lft_t,back_lft_t,back_lft_b,fwd_lft_b},
+                        0.0F,24.0F,8.0F,28.0F,   32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_lft_b,back_lft_b,back_bot_l,fwd_bot_l},
+                        0.0F,28.0F,8.0F,32.0F,   32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_bot_l,back_bot_l,back_bot_r,fwd_bot_r},
+                        8.0F,16.0F,16.0F,20.0F,  32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_bot_r,back_bot_r,back_rgt_b,fwd_rgt_b},
+                        8.0F,20.0F,16.0F,24.0F,  32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_rgt_b,back_rgt_b,back_rgt_t,fwd_rgt_t},
+                        8.0F,24.0F,16.0F,28.0F,  32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_rgt_t,back_rgt_t,back_top_r,fwd_top_r},
+                        8.0F,28.0F,16.0F,32.0F,  32.0F,32.0F,   false, Direction.UP),
+            
+            new Polygon(new Vertex[]{fwd_sm_top_r,back_sm_top_r,back_sm_top_l,fwd_sm_top_l},
+                        0.0F,16.0F,8.0F,20.0F,   32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_sm_top_l,back_sm_top_l,back_sm_lft_t,fwd_sm_lft_t},
+                        0.0F,20.0F,8.0F,24.0F,   32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_sm_lft_t,back_sm_lft_t,back_sm_lft_b,fwd_sm_lft_b},
+                        0.0F,24.0F,8.0F,28.0F,   32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_sm_lft_b,back_sm_lft_b,back_sm_bot_l,fwd_sm_bot_l},
+                        0.0F,28.0F,8.0F,32.0F,   32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_sm_bot_l,back_sm_bot_l,back_sm_bot_r,fwd_sm_bot_r},
+                        8.0F,16.0F,16.0F,20.0F,  32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_sm_bot_r,back_sm_bot_r,back_sm_rgt_b,fwd_sm_rgt_b},
+                        8.0F,20.0F,16.0F,24.0F,  32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_sm_rgt_b,back_sm_rgt_b,back_sm_rgt_t,fwd_sm_rgt_t},
+                        8.0F,24.0F,16.0F,28.0F,  32.0F,32.0F,   false, Direction.UP),
+            new Polygon(new Vertex[]{fwd_sm_rgt_t,back_sm_rgt_t,back_sm_top_r,fwd_sm_top_r},
+                        8.0F,28.0F,16.0F,32.0F,  32.0F,32.0F,   false, Direction.UP),
         };
     }
     
@@ -138,7 +184,8 @@ public class ValkgateEntityModel<T extends ValkgateEntity> extends EntityModel<T
 	        float r, float g, float b, float a) {
         matrixStack.pushPose();
         // translateAndRotate(matrixStack);
-        compileQuads(matrixStack.last(), buffer, packedLight, packedOverlay, r, g, b, a);
+        compileQuads(matrixStack.last(), buffer, packedLight, packedOverlay, // r, g, b, a);
+                     1.0F, 1.0F, 1.0F, 1.0F);
         matrixStack.popPose();
 	}
 }

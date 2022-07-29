@@ -20,6 +20,8 @@ public class ValkgateEntity extends HangingEntity {
     
     public ValkgateEntity(EntityType<? extends ValkgateEntity> entity_type, Level level) {
         super(entity_type, level);
+        
+        this.recalculateBoundingBox();
     }
     
     @Override
@@ -64,14 +66,12 @@ public class ValkgateEntity extends HangingEntity {
     
     @Override
     public int getWidth() {
-        // TODO: further research is needed what does this method do
-        return 16;
+        return 80;
     }
     
     @Override
     public int getHeight() {
-        // TODO: further research is needed what does this method do
-        return 16;
+        return 64;
     }
     
     @Override

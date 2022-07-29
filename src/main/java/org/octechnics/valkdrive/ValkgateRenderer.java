@@ -17,7 +17,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 @OnlyIn(Dist.CLIENT)
 public class ValkgateRenderer<T extends ValkgateEntity> extends EntityRenderer<T> {
-    private static final ResourceLocation TEX_LOCATION = new ResourceLocation(ValkyrienDrive.MOD_ID, "textures/blocks/dhd_top.png");
+    private static final ResourceLocation TEX_LOCATION = new ResourceLocation(ValkyrienDrive.MOD_ID, "textures/entities/valkgate.png");
     private final ValkgateEntityModel model = new ValkgateEntityModel();
     
     public ValkgateRenderer(EntityRendererProvider.Context ctx) {
