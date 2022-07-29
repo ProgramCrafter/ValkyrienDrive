@@ -34,20 +34,14 @@ import org.octechnics.valkdrive.ValkyrienDrive;
 public class ValkgateControllerBlock extends Block implements EntityBlock {
     protected static final VoxelShape AABB = 
       Shapes.or(
-        Block.box(0.0D, 0.0D, 0.0D, 64.0D, 16.0D, 16.0D),
-        Block.box(0.0D, 16.0D, 0.0D, 80.0D, 48.0D, 16.0D),
-        Block.box(16.0D, 48.0D, 0.0D, 64.0D, 64.0D, 16.0D)
+        Block.box(0.0D, 0.0D, 0.0D, 16.0D, 15.0D, 16.0D),
+        Block.box(1.0D, 15.0D, 1.0D, 15.0D, 16.0D, 15.0D)
       );
     
     public ValkgateControllerBlock() {
         super(Properties.of(Material.METAL)
                         .sound(SoundType.METAL)
                      /* .harvestTool(ToolType.PICKAXE) */ );
-    }
-    
-    @Override
-    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        return List.of(new ItemStack(this));
     }
     
     @Override public BlockEntity newBlockEntity(final BlockPos pos, final BlockState state) {
@@ -59,7 +53,10 @@ public class ValkgateControllerBlock extends Block implements EntityBlock {
         return block != null && block instanceof ValkgateAlignerBlock;
     }
     
+    // public BlockState updateShape(BlockState state, Direction neighbour_dir, BlockState neighbour_state, LevelAccessor level, BlockPos pos, BlockPos neighbourPos) {...}
+    
     @Override
+    @SuppressWarnings("deprecation") // what is the suggested alternative?
     public void neighborChanged(final BlockState state, final Level level, final BlockPos pos, final Block changedBlock, final BlockPos changedBlockPos, final boolean isMoving) {
         final BlockEntity blockEntity = level.getBlockEntity(pos);
         if (!(blockEntity instanceof final ValkgateControllerBE valkgateController)) {
@@ -94,52 +91,50 @@ public class ValkgateControllerBlock extends Block implements EntityBlock {
     }
     
     @Override
+    @SuppressWarnings("deprecation") // what is the suggested alternative? [yes, copypasted comment]
     public RenderShape getRenderShape(final BlockState state) {
         return RenderShape.MODEL;
     }
     
     @Override
+    @SuppressWarnings("deprecation") // what is the suggested alternative?
     public boolean useShapeForLightOcclusion(BlockState state) {
         return false;
     }
     
-    
     @Override
-    public boolean hasDynamicShape() {
-        return true;
+    @SuppressWarnings("deprecation") // what is the suggested alternative?
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+        return AABB;
     }
-    
     @Override
+    @SuppressWarnings("deprecation") // what is the suggested alternative?
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+        return getShape(state, level, pos, ctx);
+    }
+    @Override
+    @SuppressWarnings("deprecation") // what is the suggested alternative?
     public VoxelShape getOcclusionShape(BlockState state, BlockGetter level, BlockPos pos) {
         return AABB;
     }
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos,
-                               CollisionContext ctx) {
-        return AABB;
-    }
-    @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos,
-                                        CollisionContext ctx) {
+    @SuppressWarnings("deprecation") // what is the suggested alternative?
+    public VoxelShape getVisualShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
         return getShape(state, level, pos, ctx);
     }
     @Override
-    public VoxelShape getVisualShape(BlockState state, BlockGetter level, BlockPos pos,
-                                     CollisionContext ctx) {
-        return getShape(state, level, pos, ctx);
-    }
-    @Override
-    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos,
-                                  PathComputationType pct) {
+    @SuppressWarnings("deprecation") // what is the suggested alternative?
+    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType pct) {
         return false;
     }
-    
     @Override
+    @SuppressWarnings("deprecation") // what is the suggested alternative?
     public boolean skipRendering(BlockState cur, BlockState other, Direction dir) {
         return false;
     }
     
     @Override
+    @SuppressWarnings("deprecation") // what is the suggested alternative?
     public InteractionResult use(final BlockState state, final Level level, final BlockPos pos, final Player player, final InteractionHand hand, final BlockHitResult hit) {
         final BlockEntity blockEntity = level.getBlockEntity(pos);
         if (!(blockEntity instanceof final ValkgateControllerBE valkgateController)) {
