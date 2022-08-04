@@ -4,11 +4,15 @@ license="Read LICENSE*"
 
 [[mods]]
 modId="valkdrive"
-version="1.18.2-0.0.0"
+version="1.18.2-0.0.1"
 displayName="Valkyrien Drive"
 description='''
-OK, have to write description because it is required by Forge...
+> One Mod to rule them all, One Mod to find them,
+> One Mod to bring them all and in the warp field bind them.
+
+Sci-fi mod for Minecraft with benefits of WarpDrive, Valkyrien Skies and SGCraft, controllable by OpenComputers.
 '''
+credits="BluSunrize/ImmEng, ewoudje/VS2, fnuecke/OC2, SlimeKnights/TConstruct"
 
 [[dependencies.valkdrive]] 
     modId="forge" 
