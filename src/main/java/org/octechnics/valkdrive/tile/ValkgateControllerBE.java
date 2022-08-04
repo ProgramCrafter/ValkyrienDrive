@@ -19,6 +19,7 @@ public class ValkgateControllerBE extends BlockEntity {
     public int     dz    = 0xEE;
     
     private ValkgateEntity entity = null;
+    private boolean deferredEntityCreation = false;
     
     public ValkgateControllerBE(final BlockPos pos, final BlockState state) {
         super(ValkyrienDrive.registry_blocks.VALKGATE_CONTR_TILE.get(), pos, state);
@@ -28,11 +29,19 @@ public class ValkgateControllerBE extends BlockEntity {
     public void setLevel(Level level) throws IllegalStateException {
         super.setLevel(level);
         
-        if (level != null && !level.isClientSide()) {
-            if (entity != null) {
-                entity.discard();
-                entity = null;
-            }
+        if (deferredEntityCreation) {
+            deferredEntityCreation = false;
+            createEntity();
+        }
+    }
+    
+    private void createEntity() throws IllegalStateException {
+        if (level == null) {
+            throw new IllegalStateException("Cannot create entity without world");
+        }
+        
+        if (!level.isClientSide()) {
+            removeEntity();
             
             final ServerLevel world = (ServerLevel)level;
             if (world == null) {assert false;}
@@ -43,6 +52,14 @@ public class ValkgateControllerBE extends BlockEntity {
                 throw new IllegalStateException("Failed to create entity bound to block entity");
             }
         }
+    }
+    
+    private void removeEntity() {
+        if (entity != null) {
+            entity.discard();
+            entity = null;
+        }
+        deferredEntityCreation = false;
     }
     
     private boolean validateDelta(int adx, int ady, int adz) {
@@ -56,6 +73,8 @@ public class ValkgateControllerBE extends BlockEntity {
     public void markAssemblyInvalid() {
         valid = false;
         dx = 0xC0; dy = 0xFF; dz = 0xEE;
+        
+        removeEntity();
     }
     
     public void markAssemblyValid(int adx, int ady, int adz) {
@@ -64,6 +83,12 @@ public class ValkgateControllerBE extends BlockEntity {
             return;
         }
         valid = true; dx = adx; dy = ady; dz = adz;
+        
+        if (level != null) {
+            createEntity();
+        } else {
+            deferredEntityCreation = true;
+        }
     }
     
     @Override
