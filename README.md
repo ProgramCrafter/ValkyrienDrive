@@ -12,7 +12,8 @@ Sci-fi mod for Minecraft with benefits of WarpDrive, Valkyrien Skies and SGCraft
 - [WarpDrive](https://github.com/LemADEC/WarpDrive/)
 - [Valkyrien Skies 2](https://github.com/ValkyrienSkies/Valkyrien-Skies-2/)
 - [SGCraft](https://github.com/gcewing/SGCraft/tree/mc1.7/)
-- [OpenComputers 2](https://github.com/fnuecke/oc2)
+- [OpenComputers 2](https://github.com/fnuecke/oc2) (or [OC "classic"](https://github.com/MightyPirates/OpenComputers)?)
+- mod adding energy: IC2/BuildCraft/RailCraft/Forestry/AE2/...
 
 ### Development blocked on
 Release of either of these:
@@ -37,9 +38,9 @@ Release of either of these:
 ### RFC
 
 1. Minecraft version: ~~either 1.7.10, 1.12.2 or latest (1.18-1.19)~~ (started at 1.18.2);
-2. Way of ship storing: 
+2. Way of ship storing:
   - in shipyard (remote chunks in same dimension where the ship was built)
-    - shipyard CAN be reached by players without cheating, and that creates significant problems
+    - seems like this is requirement of Valkyrien Skies
   - in separate dimension
     - chunkloading will be hard
   - no block-grid-aligned storage at all
@@ -60,4 +61,4 @@ At the moment, this repository is RFC for collecting useful ideas.
 JAR built with supllied tools can contain non-up-to-date license information. Please, be aware of this.
 
 Possibly non-exhaustive list of content borrowed from other mods:
-- Currently, all of textures were just copied from SGCraft.
+- Currently, most of textures were just copied from SGCraft.
